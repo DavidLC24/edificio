@@ -28,4 +28,8 @@ public class Building {
             System.out.println();
         }
     }
+
+    public Owner countApartmentOwners(int floor, String door){
+        for (
+    }
 }
