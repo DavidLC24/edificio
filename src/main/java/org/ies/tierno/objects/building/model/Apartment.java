@@ -7,4 +7,7 @@ public class Apartment {
     private int floor;
     private String door;
     private Owner[] owners;
+
+    public Apartment(int floor, String door, Owner[] owners) {
+    }
 }
