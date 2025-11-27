@@ -1,18 +1,18 @@
-package org.ies.tierno.objects.bank.readers;
+package org.ies.tierno.objects.building.readers;
 
-import org.ies.tierno.objects.bank.model.Customer;
+import org.ies.tierno.objects.building.model.Owner;
 
 import java.util.Scanner;
 
-public class CustomerReader {
+public class OwnerReader {
     private final Scanner scanner;
 
-    public CustomerReader(Scanner scanner) {
+    public OwnerReader(Scanner scanner) {
         this.scanner = scanner;
     }
 
-    public Customer read(){
-        System.out.println("Introduce los datos del cliente");
+    public Owner read() {
+        System.out.println("Introduce los datos del propietario");
         System.out.println("NIF:");
         String nif = scanner.nextLine();
 
@@ -22,7 +22,7 @@ public class CustomerReader {
         System.out.println("Apellidos:");
         String surname = scanner.nextLine();
 
-        return new Customer(
+        return new Owner(
                 nif,
                 name,
                 surname
