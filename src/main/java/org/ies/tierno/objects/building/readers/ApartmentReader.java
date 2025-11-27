@@ -4,7 +4,6 @@ import org.ies.tierno.objects.building.model.Apartment;
 import org.ies.tierno.objects.building.model.Owner;
 
 import java.util.Scanner;
-
 public class ApartmentReader {
     private final Scanner scanner;
     private final OwnerReader ownerReader;
