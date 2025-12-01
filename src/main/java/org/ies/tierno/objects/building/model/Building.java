@@ -29,7 +29,29 @@ public class Building {
         }
     }
 
-    public Owner countApartmentOwners(int floor, String door){
-        for (
+    public Integer countApartmentOwners(int floor, String door) {
+        var apartment = findApartment(floor, door);
+        if (apartment != null) {
+            return apartment.getOwners().length;
+        } else {
+            return null;
+        }
     }
-}
+
+    public void showFloorApartments(int floor){
+        for(var apartment:apartments){
+            if (apartment.getFloor()==floor){
+                apartment.showInfo();
+            }
+        }
+    }
+
+    public Owner[] findOwners(int floor, String door){
+        Apartment apartment= findApartment(floor, door);
+        if (apartment==null){
+            return null;
+        } else{
+            return apartment.getOwners();
+        }
+    }
+    }
